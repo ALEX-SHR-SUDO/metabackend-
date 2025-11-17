@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: metabackend
+    runtime: node
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PINATA_API_KEY
+        sync: false
+      - key: PINATA_SECRET_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
