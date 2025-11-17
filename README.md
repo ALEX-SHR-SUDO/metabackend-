@@ -34,7 +34,7 @@ Edit `.env` and add your Pinata credentials:
 
 ```
 PINATA_API_KEY=your_api_key_here
-PINATA_SECRET_KEY=your_secret_key_here
+PINATA_SECRET_API_KEY=your_secret_api_key_here
 PORT=3001
 ```
 

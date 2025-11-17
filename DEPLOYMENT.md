@@ -58,7 +58,7 @@ In the Render dashboard, scroll to **Environment Variables** section and add:
 | Key | Value | Notes |
 |-----|-------|-------|
 | `PINATA_API_KEY` | Your Pinata API key | Get from pinata.cloud |
-| `PINATA_SECRET_KEY` | Your Pinata secret key | Get from pinata.cloud |
+| `PINATA_SECRET_API_KEY` | Your Pinata secret key | Get from pinata.cloud |
 | `PORT` | `10000` | Render default port |
 | `NODE_ENV` | `production` | Production mode |
 
@@ -104,7 +104,7 @@ In the Render dashboard, scroll to **Environment Variables** section and add:
 3. **Select repository**: `metabackend`
 4. **Add variables**:
    - `PINATA_API_KEY`
-   - `PINATA_SECRET_KEY`
+   - `PINATA_SECRET_API_KEY`
 5. Railway auto-detects Node.js and builds automatically
 
 ### Heroku
@@ -117,7 +117,7 @@ In the Render dashboard, scroll to **Environment Variables** section and add:
 3. **Set environment variables**:
    ```bash
    heroku config:set PINATA_API_KEY=your_key
-   heroku config:set PINATA_SECRET_KEY=your_secret
+   heroku config:set PINATA_SECRET_API_KEY=your_secret
    ```
 4. **Deploy**:
    ```bash
@@ -168,7 +168,7 @@ In Render dashboard:
 ```env
 # Pinata API credentials (Required)
 PINATA_API_KEY=your_pinata_api_key_here
-PINATA_SECRET_KEY=your_pinata_secret_key_here
+PINATA_SECRET_API_KEY=your_pinata_secret_api_key_here
 
 # Server configuration
 PORT=10000                    # Render uses 10000, locally use 3001
