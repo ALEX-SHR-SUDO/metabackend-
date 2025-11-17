@@ -25,7 +25,7 @@ app.post('/api/upload-image', upload.single('file'), async (req: Request, res: R
     }
 
     const pinataApiKey = process.env.PINATA_API_KEY;
-    const pinataSecretKey = process.env.PINATA_SECRET_KEY;
+    const pinataSecretKey = process.env.PINATA_SECRET_API_KEY;
 
     if (!pinataApiKey || !pinataSecretKey) {
       return res.status(500).json({ error: 'Pinata API keys not configured' });
@@ -63,7 +63,7 @@ app.post('/api/upload-metadata', async (req: Request, res: Response) => {
     const metadata = req.body;
 
     const pinataApiKey = process.env.PINATA_API_KEY;
-    const pinataSecretKey = process.env.PINATA_SECRET_KEY;
+    const pinataSecretKey = process.env.PINATA_SECRET_API_KEY;
 
     if (!pinataApiKey || !pinataSecretKey) {
       return res.status(500).json({ error: 'Pinata API keys not configured' });
