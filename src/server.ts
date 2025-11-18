@@ -108,7 +108,12 @@ app.post('/api/upload-metadata', async (req: Request, res: Response) => {
     console.log(`[${requestId}] Uploading metadata to Pinata...`);
     const response = await axios.post(
       'https://api.pinata.cloud/pinning/pinJSONToIPFS',
-      metadata,
+      {
+        pinataContent: metadata,
+        pinataMetadata: {
+          name: 'metadata.json'
+        }
+      },
       {
         headers: {
           'Content-Type': 'application/json',
